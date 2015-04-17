@@ -11,7 +11,9 @@ class stopwatch {
         time_t finishT;
 
     public:
-        double getDuration() { return (finishT - startT); }
+        time_t getDuration() { 
+            return difftime(finishT, startT);
+        }
         void start() { 
             startT  = time(NULL);   
         }
