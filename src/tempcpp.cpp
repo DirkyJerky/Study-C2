@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdlib.h>
 #define MAX_BUF 512
-#define println(X) cout << X << "\n"
+#define println(X) std::cout << X << std::endl
 
 #define demo_int(X) printf( #X " -> %d\n", (X) );
 #define demo_string(X) printf( #X " -> %s\n", (X) );
