@@ -9,6 +9,15 @@
 #define demo_float(X) printf( #X " -> %f\n", (X) );
 #define demo(X) demo_int(X)
 
+class %%% {
+    private:
+        %%%
+
+    public:
+        %%%
+
+};
+
 int main(int argc, char *argv[]) {
     if(argc != 2) {
         printf("Usage: %s <input>\n", argv[0]);
