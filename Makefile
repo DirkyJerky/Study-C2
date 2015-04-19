@@ -13,12 +13,12 @@ CFLAGS := -g # -Wall
 CPPFLAGS := -g # -Wall
 
 # *.c
-$(BINDIR)/%.exe: $(SRCDIR)/%.$(CEXT)
+$(BINDIR)/%.exe: $(SRCDIR)/%.$(CEXT) $(SRCDIR)/common.h
 	@mkdir -p $(BINDIR)
 	$(CC) $(CFLAGS) -o $@ $<
 
 # *.cpp
-$(BINDIR)/%.exe: $(SRCDIR)/%.$(CPPEXT)
+$(BINDIR)/%.exe: $(SRCDIR)/%.$(CPPEXT) $(SRCDIR)/common.h
 	@mkdir -p $(BINDIR)
 	$(CXX) $(CPPFLAGS) -o $@ $<
 
