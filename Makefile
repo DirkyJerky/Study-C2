@@ -1,3 +1,5 @@
+.PHONY: clean allcpp allc
+
 CC := gcc
 CXX := g++
 SRCDIR := src
@@ -11,6 +13,12 @@ COBJECTS := $(patsubst $(SRCDIR)/%,$(BINDIR)/%,$(SOURCES:.$(CEXT)=.exe))
 CPPOBJECTS := $(patsubst $(SRCDIR)/%,$(BINDIR)/%,$(SOURCES:.$(CPPEXT)=.exe))
 CFLAGS := -g # -Wall
 CPPFLAGS := -g # -Wall
+
+allcpp: $(CPPOBJECTS)
+	@true
+
+allc: $(COBJECTS)
+	@true
 
 # *.c
 $(BINDIR)/%.exe: $(SRCDIR)/%.$(CEXT) $(SRCDIR)/common.h
@@ -27,4 +35,3 @@ clean:
 	$(RM) -r $(BINDIR)
 
 
-.PHONY: clean
