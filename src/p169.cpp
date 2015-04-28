@@ -19,14 +19,6 @@ class coord {
             y = 0;
         }
 
-        int *getXP() {
-            return &x;
-        }
-
-        int *getYP() {
-            return &y;
-        }
-
         int getX() {
             return x;
         }
@@ -41,6 +33,9 @@ class coord {
             return *this;
         }
 
+        coord& operator++(int) {
+            return operator++();
+        }
 };
 
 int main(int argc, char *argv[]) {
@@ -49,12 +44,8 @@ int main(int argc, char *argv[]) {
     demo_void(iCoord = new coord(1, 4));
     demo_int(iCoord->getX());
     demo_int(iCoord->getY());
-    demo_pointer(iCoord->getXP());
-    demo_pointer(iCoord->getYP());
     
-    demo_void(++iCoord);
+    demo_void(iCoord++);
     demo_int(iCoord->getX());
     demo_int(iCoord->getY());
-    demo_pointer(iCoord->getXP());
-    demo_pointer(iCoord->getYP());
 }
