@@ -33,8 +33,10 @@ class coord {
             return *this;
         }
 
-        coord& operator++(int) {
-            return operator++();
+        coord operator++(int) {
+            coord *old = new coord(x, y);
+            ++(*this);
+            return *old;
         }
 };
 
@@ -45,7 +47,7 @@ int main(int argc, char *argv[]) {
     demo_int(iCoord->getX());
     demo_int(iCoord->getY());
     
-    demo_void(iCoord++);
+    demo_void( iCoord->operator++() );
     demo_int(iCoord->getX());
     demo_int(iCoord->getY());
 }
