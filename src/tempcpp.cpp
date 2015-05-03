@@ -8,6 +8,9 @@ class %%% {
     private:
         %%%
 
+    protected:
+        %%%
+
     public:
         %%%
 
