@@ -1,7 +1,7 @@
 #define println(X) std::cout << X << std::endl
 
 #define demo_int(X) printf( #X " -> %d\n", (X) )
-char *___ret;
+const char *___ret;
 bool ___retb;
 #define demo_string(X) ___ret = (X); printf( #X " -> \"%s\"\n", ((___ret == NULL) ? "NULL" : ___ret) )
 #define demo_float(X) printf( #X " -> %f\n", (X) )
