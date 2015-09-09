@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+#include <cstring>
 #include <stdlib.h>
 #include "common.h"
 #define MAX_BUF 512

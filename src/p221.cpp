@@ -5,7 +5,7 @@
 #define MAX_BUF 512
 
 int main(int argc, char *argv[]) {
-    long oldFlags = std::cout.flags();
+    std::ios_base::fmtflags oldFlags = std::cout.flags();
 
     demo_void(std::cout.setf(std::ios::showbase | std::ios::hex));
     demo_void(std::cout.unsetf(std::ios::dec));
